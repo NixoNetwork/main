@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Satoshi';
+  src: url('../assets/fonts/Satoshi-Variable.ttf') format('truetype');
+  font-weight: 100 900; /* Variable font weight range */
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  @apply bg-space-black text-white font-sans;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.glass-panel {
+  @apply bg-panel/80 backdrop-blur-md border border-panel-light/30 rounded-xl shadow-lg;
+}
+
+.glass-button {
+  @apply bg-nixo-green/20 backdrop-blur-md hover:bg-nixo-green/30 transition-all duration-300 
+  border border-nixo-green/50 text-nixo-green-light font-medium py-3 px-6 rounded-lg
+  hover:shadow-[0_0_15px_rgba(60,205,58,0.5)] active:scale-95;
+}
+
+.select-input {
+  @apply w-full bg-space-black/50 border border-nixo-green/30 rounded-lg py-3 px-4 text-white appearance-none focus:outline-none focus:ring-2 focus:ring-nixo-green/50 font-display;
+}
+
+.nixo-font {
+  font-family: 'Satoshi', sans-serif;
+}
+
+.space-bg {
+  background-image: url('https://images.pexels.com/photos/2387793/pexels-photo-2387793.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@keyframes particles {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-2000px) rotate(360deg);
+  }
+}
